@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Block search engines until the site is ready -->
+  <meta name="robots" content="noindex">
+
+  <title>Samarth Hospital — Multi-Speciality Hospital in Pipariya, MP</title>
+  <meta name="description" content="Samarth Hospital is a multi-speciality hospital in Pipariya, Madhya Pradesh. Call +91 86025 65053.">
+
+  <!-- Stylesheet (relative path for GitHub Pages compatibility) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================================
+       HEADER — repeated on every page (update all pages together)
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo + Hospital name -->
+      <a href="index.html" class="site-logo" aria-label="Samarth Hospital — Home">
+        <!-- TODO: replace with <img src="assets/images/logo.png" alt="Samarth Hospital logo"> -->
+        🏥 Samarth Hospital
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Call button (desktop only, hidden on mobile) -->
+      <a href="tel:+918602565053" class="btn btn-primary header-call-btn">
+        📞 Call Now
+      </a>
+
+      <!-- Hamburger menu button (mobile only) -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile navigation (toggled by JS) -->
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="contact.html">Contact</a>
+      <a href="tel:+918602565053">📞 Call +91 86025 65053</a>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content">
+
+    <!-- ---- Hero Section ---- -->
+    <section class="hero">
+      <div class="container">
+        <h1>Samarth Hospital</h1>
+        <p class="motto">
+          <span class="tbc">TBC: Hospital motto / tagline</span>
+        </p>
+        <div class="hero-buttons">
+          <a href="tel:+918602565053" class="btn btn-primary">📞 Call Now</a>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927"
+             class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            📍 Get Directions
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- Quick Info Strip ---- -->
+    <section class="quick-info" aria-label="Key information">
+      <div class="container">
+        <div class="quick-info-grid">
+
+          <div class="quick-info-item">
+            <h3>Address</h3>
+            <p>Pushp Vatika, Sandiya Road,<br>
+               Maharana Pratap Ward, Pipariya,<br>
+               Madhya Pradesh 461775</p>
+          </div>
+
+          <div class="quick-info-item">
+            <h3>Phone</h3>
+            <p><a href="tel:+918602565053">+91 86025 65053</a></p>
+          </div>
+
+          <div class="quick-info-item">
+            <h3>Timings</h3>
+            <p><span class="tbc">TBC: OPD hours / opening times</span></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- Services Overview ---- -->
+    <section class="section section-alt" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading" class="section-title">Our Services</h2>
+        <p class="section-subtitle">
+          <span class="tbc">TBC: Confirmed list of departments and services</span>
+        </p>
+
+        <div class="card-grid">
+          <!-- Placeholder cards — replace with real departments -->
+          <div class="card">
+            <h3><span class="tbc">TBC: Department 1</span></h3>
+            <p><span class="tbc">TBC: Brief description of this department.</span></p>
+          </div>
+          <div class="card">
+            <h3><span class="tbc">TBC: Department 2</span></h3>
+            <p><span class="tbc">TBC: Brief description of this department.</span></p>
+          </div>
+          <div class="card">
+            <h3><span class="tbc">TBC: Department 3</span></h3>
+            <p><span class="tbc">TBC: Brief description of this department.</span></p>
+          </div>
+        </div>
+
+        <p style="text-align:center; margin-top:1.5rem;">
+          <a href="services.html" class="btn btn-outline">View All Services</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ---- Doctors Preview ---- -->
+    <section class="section" aria-labelledby="doctors-heading">
+      <div class="container">
+        <h2 id="doctors-heading" class="section-title">Our Doctors</h2>
+        <p class="section-subtitle">
+          <span class="tbc">TBC: Confirmed doctor details</span>
+        </p>
+
+        <div class="card-grid">
+          <!-- Placeholder cards — replace with real doctor info -->
+          <div class="card" style="text-align:center;">
+            <div class="photo-placeholder" style="aspect-ratio:1/1; border-radius:50%; max-width:140px; margin:0 auto 1rem;">
+              Photo coming soon
+            </div>
+            <h3><span class="tbc">TBC: Doctor Name</span></h3>
+            <p><span class="tbc">TBC: Qualification, Department</span></p>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="photo-placeholder" style="aspect-ratio:1/1; border-radius:50%; max-width:140px; margin:0 auto 1rem;">
+              Photo coming soon
+            </div>
+            <h3><span class="tbc">TBC: Doctor Name</span></h3>
+            <p><span class="tbc">TBC: Qualification, Department</span></p>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="photo-placeholder" style="aspect-ratio:1/1; border-radius:50%; max-width:140px; margin:0 auto 1rem;">
+              Photo coming soon
+            </div>
+            <h3><span class="tbc">TBC: Doctor Name</span></h3>
+            <p><span class="tbc">TBC: Qualification, Department</span></p>
+          </div>
+        </div>
+
+        <p style="text-align:center; margin-top:1.5rem;">
+          <a href="doctors.html" class="btn btn-outline">Meet All Doctors</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ---- Photo Gallery ---- -->
+    <section class="section section-alt" aria-labelledby="gallery-heading">
+      <div class="container">
+        <h2 id="gallery-heading" class="section-title">Our Hospital</h2>
+        <p class="section-subtitle">A look inside Samarth Hospital</p>
+
+        <div class="gallery-grid">
+          <!-- Placeholder images — replace with real hospital photos -->
+          <div class="photo-placeholder">Photo coming soon</div>
+          <div class="photo-placeholder">Photo coming soon</div>
+          <div class="photo-placeholder">Photo coming soon</div>
+          <div class="photo-placeholder">Photo coming soon</div>
+          <div class="photo-placeholder">Photo coming soon</div>
+          <div class="photo-placeholder">Photo coming soon</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- Latest Updates ---- -->
+    <section class="section" aria-labelledby="updates-heading">
+      <div class="container">
+        <h2 id="updates-heading" class="section-title">Latest Updates</h2>
+
+        <!-- These are SAMPLE PLACEHOLDERS — replace with real announcements before launch -->
+        <ul class="updates-list">
+          <!-- Easy to edit: copy a <li> block, change the date and text -->
+          <li>
+            <span class="update-date">Sample date</span>
+            <span class="tbc">TBC: Sample placeholder — replace with a real announcement from the hospital</span>
+          </li>
+          <li>
+            <span class="update-date">Sample date</span>
+            <span class="tbc">TBC: Sample placeholder — replace with a real announcement from the hospital</span>
+          </li>
+          <li>
+            <span class="update-date">Sample date</span>
+            <span class="tbc">TBC: Sample placeholder — replace with a real announcement from the hospital</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER — repeated on every page (update all pages together)
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Column 1: About -->
+        <div>
+          <h4>Samarth Hospital</h4>
+          <p>A multi-speciality hospital in Pipariya, Madhya Pradesh.</p>
+        </div>
+
+        <!-- Column 2: Quick links -->
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy &amp; Disclaimer</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div>
+          <h4>Contact Us</h4>
+          <p>
+            Pushp Vatika, Sandiya Road,<br>
+            Maharana Pratap Ward, Pipariya,<br>
+            Madhya Pradesh 461775
+          </p>
+          <p style="margin-top:0.5rem;">
+            📞 <a href="tel:+918602565053">+91 86025 65053</a>
+          </p>
+          <p style="margin-top:0.5rem;">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927"
+               target="_blank" rel="noopener noreferrer">
+              📍 Get Directions
+            </a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Samarth Hospital. All rights reserved.</p>
+        <p class="footer-emergency">
+          For a medical emergency, call the hospital or go to the nearest emergency department.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       STICKY MOBILE CALL BAR — visible on phones, hidden on desktop
+       ============================================================ -->
+  <div class="call-bar" role="complementary" aria-label="Call hospital">
+    <a href="tel:+918602565053">📞 Call Samarth Hospital</a>
+  </div>
+
+  <!-- JavaScript (relative path) -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

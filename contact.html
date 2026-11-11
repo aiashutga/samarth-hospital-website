@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Contact Us — Samarth Hospital, Pipariya</title>
+  <meta name="description" content="Contact Samarth Hospital in Pipariya. Call +91 86025 65053 or send us a message.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================================
+       HEADER — same as every page
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo" aria-label="Samarth Hospital — Home">
+        🏥 Samarth Hospital
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <a href="tel:+918602565053" class="btn btn-primary header-call-btn">📞 Call Now</a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="tel:+918602565053">📞 Call +91 86025 65053</a>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container">
+        <h1>Contact Us</h1>
+      </div>
+    </section>
+
+    <section class="page-content section">
+      <div class="container">
+
+        <!-- Contact details -->
+        <h2>Reach Us</h2>
+        <p>
+          <strong>Address:</strong><br>
+          Samarth Hospital, Pushp Vatika, Sandiya Road,<br>
+          Maharana Pratap Ward, Pipariya,<br>
+          Madhya Pradesh 461775
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+918602565053">+91 86025 65053</a>
+        </p>
+        <p>
+          <strong>Timings:</strong>
+          <span class="tbc">TBC: OPD hours / opening times</span>
+        </p>
+        <p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927"
+             class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="margin-top:0.5rem;">
+            📍 Get Directions
+          </a>
+        </p>
+
+        <!-- Google Maps embed -->
+        <h2>Find Us on the Map</h2>
+        <div class="map-wrap">
+          <!-- TODO: Replace this placeholder src with the official Google Maps embed URL -->
+          <iframe
+            src="https://www.google.com/maps?q=22.762863,78.354927&z=17&output=embed"
+            title="Samarth Hospital location on Google Maps"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Contact form -->
+        <h2>Send Us a Message</h2>
+        <p class="form-note" style="margin-bottom:1rem;">
+          Please do not share medical details here. For emergencies, call us at
+          <a href="tel:+918602565053">+91 86025 65053</a>.
+        </p>
+
+        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+          <!-- Web3Forms access key — replace with real key before launch -->
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+          <!-- Honeypot spam trap (invisible to humans) -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="hp-website">Website</label>
+            <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="e.g. Rahul Sharma">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-phone">Phone Number</label>
+            <input type="tel" id="contact-phone" name="phone" required autocomplete="tel" placeholder="e.g. 98765 43210">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" required placeholder="How can we help you?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+
+          <div id="form-status" class="form-status"></div>
+
+          <p class="form-note">
+            Your information is sent through a third-party form service and is used only to respond to your enquiry.
+            See our <a href="privacy.html">Privacy &amp; Disclaimer</a> page.
+          </p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER — same as every page
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Samarth Hospital</h4>
+          <p>A multi-speciality hospital in Pipariya, Madhya Pradesh.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy &amp; Disclaimer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p>
+            Pushp Vatika, Sandiya Road,<br>
+            Maharana Pratap Ward, Pipariya,<br>
+            Madhya Pradesh 461775
+          </p>
+          <p style="margin-top:0.5rem;">📞 <a href="tel:+918602565053">+91 86025 65053</a></p>
+          <p style="margin-top:0.5rem;">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927" target="_blank" rel="noopener noreferrer">📍 Get Directions</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Samarth Hospital. All rights reserved.</p>
+        <p class="footer-emergency">For a medical emergency, call the hospital or go to the nearest emergency department.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="call-bar" role="complementary" aria-label="Call hospital">
+    <a href="tel:+918602565053">📞 Call Samarth Hospital</a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
