@@ -16,6 +16,7 @@ samarth-hospital-website/
 ├── about.html              About the hospital
 ├── services.html           Departments & services
 ├── doctors.html            Our doctors
+├── environment.html        Bio-medical waste management & environment report
 ├── contact.html            Contact & enquiry form
 ├── privacy.html            Privacy & disclaimer
 ├── css/
@@ -48,6 +49,23 @@ samarth-hospital-website/
 ## Before Going Live
 
 See **[TODO-before-launch.md](TODO-before-launch.md)** for the full checklist of items that need to be completed, confirmed, or replaced before the site goes public.
+
+## How to Update the Environment Report Each Year
+
+The hospital records its bio-medical waste quantities monthly under four colour categories (Yellow, Red, White, Blue) and files an annual return for 1 January to 31 December.
+
+When a new annual statement is prepared:
+1. Open **`environment.html`**:
+   - Update the period in the summary paragraph, header subtitle, and "Report Details" box.
+   - Update the 12 monthly table rows with the new quantities (Yellow, Red, White, Blue, Total).
+   - Update the printed annual total, monthly average, and daily average rows in the table footer (`<tfoot>`).
+   - Update the Treatment & Disposal Summary table (Incineration vs. Autoclaving).
+   - Update the monthly bar chart widths and labels (adjust highest/lowest month tags).
+   - Update the percentage shares in the category stacked bar and text legend.
+2. Open **`index.html`**:
+   - Update the four key-figure cards in the "Environment Protection & Bio-Medical Waste Management" section (Period, Approx. total, Treatment, Handed to).
+   - Update the category distribution stacked bar and text legend.
+3. Verify figures: Always use the printed figures from the official annual statement; mark calculated totals/percentages with `*` and keep the explanatory note.
 
 ## Licence
 
