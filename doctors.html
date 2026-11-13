@@ -3,32 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Block search engines until the site is ready -->
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0C3EAB">
+
   <title>Our Doctors — Samarth Hospital, Pipariya</title>
-  <meta name="description" content="Meet the doctors at Samarth Hospital, Pipariya, Madhya Pradesh.">
+  <meta name="description" content="Consultant doctors and medical specialists at Samarth Hospital, Pipariya.">
+
+  <!-- Favicons and app icons -->
+  <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- Social Share Preview (Open Graph & Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Samarth Hospital">
+  <meta property="og:title" content="Our Doctors — Samarth Hospital, Pipariya">
+  <meta property="og:description" content="Consultant doctors and medical specialists at Samarth Hospital, Pipariya.">
+  <meta property="og:image" content="https://samarth-hospital.com/assets/images/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Stylesheet (relative path) -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- Skip link for keyboard / screen-reader users -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ============================================================
-       HEADER — same as every page
+       HEADER — repeated on every page
        ============================================================ -->
   <header class="site-header">
     <div class="container header-inner">
+
+      <!-- Logo -->
       <a href="index.html" class="site-logo" aria-label="Samarth Hospital — Home">
-        🏥 Samarth Hospital
+        <img src="assets/images/logo-full.png" width="600" height="213" alt="Samarth Hospital - Saving lives with caring hands">
       </a>
+
+      <!-- Desktop navigation -->
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <a href="services.html">Departments</a>
         <a href="doctors.html" aria-current="page">Doctors</a>
         <a href="environment.html">Environment</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a href="tel:+918602565053" class="btn btn-primary header-call-btn">📞 Call Now</a>
+
+      <!-- Call button (desktop only, hidden on mobile) -->
+      <a href="tel:+918602565053" class="btn btn-call header-call-btn">
+        📞 Call Now
+      </a>
+
+      <!-- Hamburger menu button (mobile only) -->
       <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -37,14 +69,16 @@
         </svg>
       </button>
     </div>
+
+    <!-- Mobile navigation (toggled by JS) -->
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
+      <a href="services.html">Departments</a>
       <a href="doctors.html" aria-current="page">Doctors</a>
       <a href="environment.html">Environment</a>
       <a href="contact.html">Contact</a>
-      <a href="tel:+918602565053">📞 Call +91 86025 65053</a>
+      <a href="tel:+918602565053" class="mobile-call-link">📞 Call +91 86025 65053</a>
     </nav>
   </header>
 
@@ -55,38 +89,83 @@
     <section class="page-header">
       <div class="container">
         <h1>Our Doctors</h1>
+        <p class="page-subtitle">Medical specialists at Samarth Hospital, Pipariya.</p>
       </div>
     </section>
 
     <section class="page-content section">
       <div class="container">
-        <p><span class="tbc">TBC: This page will list all doctors with their names, qualifications, designations, and departments. Doctor details are needed from the hospital.</span></p>
+
+        <!-- TBC Block: Doctors List -->
+        <div class="tbc-block">
+          <p><span class="tbc">TBC: This page will list all doctors with their names, qualifications, designations, and departments. Doctor details are needed from the hospital.</span></p>
+
+          <div class="card-grid" style="margin-top:2rem;">
+            <div class="card" style="text-align:center;">
+              <div class="photo-placeholder" style="aspect-ratio:1/1; border-radius:50%; max-width:140px; margin:0 auto 1rem;">
+                Photo coming soon
+              </div>
+              <h3><span class="tbc">TBC: Doctor Name</span></h3>
+              <p><span class="tbc">TBC: Qualification, Department</span></p>
+            </div>
+            <div class="card" style="text-align:center;">
+              <div class="photo-placeholder" style="aspect-ratio:1/1; border-radius:50%; max-width:140px; margin:0 auto 1rem;">
+                Photo coming soon
+              </div>
+              <h3><span class="tbc">TBC: Doctor Name</span></h3>
+              <p><span class="tbc">TBC: Qualification, Department</span></p>
+            </div>
+            <div class="card" style="text-align:center;">
+              <div class="photo-placeholder" style="aspect-ratio:1/1; border-radius:50%; max-width:140px; margin:0 auto 1rem;">
+                Photo coming soon
+              </div>
+              <h3><span class="tbc">TBC: Doctor Name</span></h3>
+              <p><span class="tbc">TBC: Qualification, Department</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:2.5rem; text-align:center; background-color:var(--tint);">
+          <h2 style="font-size:1.2rem; color:var(--navy-deep); margin-top:0;">Consultant Availability &amp; Appointments</h2>
+          <p style="margin:0.5rem auto 1.25rem; max-width:600px;">Consultant details: please call the hospital. Our staff will confirm specialist availability and OPD timings for your visit.</p>
+          <a href="tel:+918602565053" class="btn btn-call">📞 Call +91 86025 65053</a>
+        </div>
+
       </div>
     </section>
   </main>
 
   <!-- ============================================================
-       FOOTER — same as every page
+       FOOTER — repeated on every page
        ============================================================ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
+
+        <!-- Column 1: Logo & About -->
         <div>
-          <h4>Samarth Hospital</h4>
-          <p>A multi-speciality hospital in Pipariya, Madhya Pradesh.</p>
+          <div class="footer-logo-panel">
+            <img src="assets/images/logo-full.png" width="600" height="213" alt="Samarth Hospital - Saving lives with caring hands">
+          </div>
+          <p class="footer-tagline">A multi-speciality hospital in Pipariya, Madhya Pradesh.</p>
+          <p class="footer-timing-summary"><strong>OPD Timings:</strong><br>OPD Mon-Sat 11:00 AM-2:30 PM, 6:00-7:00 PM</p>
         </div>
+
+        <!-- Column 2: Quick links -->
         <div>
           <h4>Quick Links</h4>
           <ul class="footer-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Departments</a></li>
             <li><a href="doctors.html">Doctors</a></li>
             <li><a href="environment.html">Environment</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy.html">Privacy &amp; Disclaimer</a></li>
           </ul>
         </div>
+
+        <!-- Column 3: Contact & Emergency -->
         <div>
           <h4>Contact Us</h4>
           <p>
@@ -94,24 +173,41 @@
             Maharana Pratap Ward, Pipariya,<br>
             Madhya Pradesh 461775
           </p>
-          <p style="margin-top:0.5rem;">📞 <a href="tel:+918602565053">+91 86025 65053</a></p>
-          <p style="margin-top:0.5rem;">
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927" target="_blank" rel="noopener noreferrer">📍 Get Directions</a>
+          <p style="margin-top:0.6rem;">
+            📞 <a href="tel:+918602565053">+91 86025 65053</a>
+          </p>
+          <p style="margin-top:0.6rem;">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927"
+               target="_blank" rel="noopener noreferrer">
+              📍 Get Directions
+            </a>
           </p>
         </div>
+
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2026 Samarth Hospital. All rights reserved.</p>
-        <p class="footer-emergency">For a medical emergency, call the hospital or go to the nearest emergency department.</p>
+        <p class="footer-emergency">
+          For a medical emergency, call the hospital or go to the nearest emergency department.
+        </p>
       </div>
     </div>
+    <!-- Thin bottom gradient strip -->
+    <div class="footer-strip" aria-hidden="true"></div>
   </footer>
 
+  <!-- ============================================================
+       STICKY MOBILE CALL BAR — visible on phones, hidden on desktop
+       ============================================================ -->
   <div class="call-bar" role="complementary" aria-label="Call hospital">
-    <a href="tel:+918602565053">📞 Call Samarth Hospital</a>
+    <div class="call-bar-inner">
+      <span class="call-bar-label">Call Samarth Hospital</span>
+      <a href="tel:+918602565053" class="btn btn-call btn-call-sm">Call now</a>
+    </div>
   </div>
 
+  <!-- JavaScript (relative path) -->
   <script src="js/main.js"></script>
 </body>
 </html>
-

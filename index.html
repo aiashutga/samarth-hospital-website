@@ -6,9 +6,25 @@
 
   <!-- Block search engines until the site is ready -->
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0C3EAB">
 
   <title>Samarth Hospital — Multi-Speciality Hospital in Pipariya, MP</title>
-  <meta name="description" content="Samarth Hospital is a multi-speciality hospital in Pipariya, Madhya Pradesh. Call +91 86025 65053.">
+  <meta name="description" content="Samarth Hospital is a multi-speciality hospital in Pipariya, Madhya Pradesh, providing medical, orthopaedic and dental care.">
+
+  <!-- Favicons and app icons -->
+  <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- Social Share Preview (Open Graph & Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Samarth Hospital">
+  <meta property="og:title" content="Samarth Hospital — Multi-Speciality Hospital in Pipariya, MP">
+  <meta property="og:description" content="Samarth Hospital is a multi-speciality hospital in Pipariya, Madhya Pradesh, providing medical, orthopaedic and dental care.">
+  <meta property="og:image" content="https://samarth-hospital.com/assets/images/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Stylesheet (relative path for GitHub Pages compatibility) -->
   <link rel="stylesheet" href="css/style.css">
@@ -24,24 +40,23 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <!-- Logo + Hospital name -->
+      <!-- Logo -->
       <a href="index.html" class="site-logo" aria-label="Samarth Hospital — Home">
-        <!-- TODO: replace with <img src="assets/images/logo.png" alt="Samarth Hospital logo"> -->
-        🏥 Samarth Hospital
+        <img src="assets/images/logo-full.png" width="600" height="213" alt="Samarth Hospital - Saving lives with caring hands">
       </a>
 
       <!-- Desktop navigation -->
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <a href="services.html">Departments</a>
         <a href="doctors.html">Doctors</a>
         <a href="environment.html">Environment</a>
         <a href="contact.html">Contact</a>
       </nav>
 
       <!-- Call button (desktop only, hidden on mobile) -->
-      <a href="tel:+918602565053" class="btn btn-primary header-call-btn">
+      <a href="tel:+918602565053" class="btn btn-call header-call-btn">
         📞 Call Now
       </a>
 
@@ -59,11 +74,11 @@
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
       <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
+      <a href="services.html">Departments</a>
       <a href="doctors.html">Doctors</a>
       <a href="environment.html">Environment</a>
       <a href="contact.html">Contact</a>
-      <a href="tel:+918602565053">📞 Call +91 86025 65053</a>
+      <a href="tel:+918602565053" class="mobile-call-link">📞 Call +91 86025 65053</a>
     </nav>
   </header>
 
@@ -74,18 +89,28 @@
 
     <!-- ---- Hero Section ---- -->
     <section class="hero">
-      <div class="container">
-        <h1>Samarth Hospital</h1>
-        <p class="motto">
-          <span class="tbc">TBC: Hospital motto / tagline</span>
-        </p>
-        <div class="hero-buttons">
-          <a href="tel:+918602565053" class="btn btn-primary">📞 Call Now</a>
-          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927"
-             class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-            📍 Get Directions
-          </a>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>Samarth Hospital</h1>
+          <p class="hero-tagline">Saving lives with caring hands</p>
+          <p class="hero-desc">Multi-speciality hospital in Pipariya, Madhya Pradesh</p>
+          <div class="hero-buttons">
+            <a href="tel:+918602565053" class="btn btn-call">📞 Call Now</a>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927"
+               class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              📍 Get Directions
+            </a>
+          </div>
         </div>
+        <!-- Decorative emblem (desktop only) -->
+        <img src="assets/images/logo-emblem.png" class="hero-emblem" alt="" aria-hidden="true" width="384" height="384">
+      </div>
+      <!-- Wave divider -->
+      <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path fill="#078EBE" fill-opacity="0.22" d="M0,32L60,42.7C120,53,240,75,360,74.7C480,75,600,53,720,48C840,43,960,53,1080,58.7C1200,64,1320,64,1380,64L1440,64L1440,80L1380,80C1320,80,1200,80,1080,80C960,80,840,80,720,80C600,80,480,80,360,80C240,80,120,80,60,80L0,80Z"></path>
+          <path fill="#0C3EAB" fill-opacity="0.16" d="M0,50L48,48C96,46,192,42,288,48C384,54,480,70,576,68C672,66,768,46,864,40C960,34,1056,42,1152,48C1248,54,1344,58,1392,60L1440,62L1440,80L1392,80C1344,80,1248,80,1152,80C1056,80,960,80,864,80C768,80,672,80,576,80C480,80,384,80,288,80C192,80,96,80,48,80L0,80Z"></path>
+        </svg>
       </div>
     </section>
 
@@ -95,58 +120,89 @@
         <div class="quick-info-grid">
 
           <div class="quick-info-item">
-            <h3>Address</h3>
+            <h3>📍 Address</h3>
             <p>Pushp Vatika, Sandiya Road,<br>
                Maharana Pratap Ward, Pipariya,<br>
                Madhya Pradesh 461775</p>
           </div>
 
           <div class="quick-info-item">
-            <h3>Phone</h3>
+            <h3>📞 Phone</h3>
             <p><a href="tel:+918602565053">+91 86025 65053</a></p>
+            <div class="tbc-block" style="margin-top:0.4rem; font-size:0.85rem;">
+              <span>Emergency / ambulance service: </span><span class="tbc">TBC: confirm with the hospital</span>
+            </div>
           </div>
 
           <div class="quick-info-item">
-            <h3>Timings</h3>
-            <p><span class="tbc">TBC: OPD hours / opening times</span></p>
+            <h3>🕒 OPD Timings</h3>
+            <p><strong>OPD (Outpatient Department):</strong><br>
+               Monday to Saturday, 11:00 AM to 2:30 PM and 6:00 PM to 7:00 PM</p>
+            <p style="margin-top:0.35rem;"><strong>Other departments:</strong><br>
+               11:00 AM to 7:00 PM</p>
+            <p style="margin-top:0.35rem; font-size:0.85rem; color:#C9D6EE;">
+              Please call to confirm timings before you visit.
+            </p>
+            <div class="tbc-block" style="margin-top:0.4rem; font-size:0.85rem;">
+              <span>Sunday and public holidays: </span><span class="tbc">TBC: confirm with the hospital</span>
+            </div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ---- Services Overview ---- -->
-    <section class="section section-alt" aria-labelledby="services-heading">
+    <!-- ---- Departments Overview ---- -->
+    <section class="section section-alt" aria-labelledby="departments-heading">
       <div class="container">
-        <h2 id="services-heading" class="section-title">Our Services</h2>
+        <h2 id="departments-heading" class="section-title">Our Departments</h2>
         <p class="section-subtitle">
-          <span class="tbc">TBC: Confirmed list of departments and services</span>
+          Medical care available at Samarth Hospital, Pipariya.
         </p>
 
         <div class="card-grid">
-          <!-- Placeholder cards — replace with real departments -->
-          <div class="card">
-            <h3><span class="tbc">TBC: Department 1</span></h3>
-            <p><span class="tbc">TBC: Brief description of this department.</span></p>
+          <!-- General Medicine -->
+          <div class="card dept-card">
+            <div class="dept-badge-wrap">
+              <img src="assets/icons/dept-general-medicine.svg" width="96" height="96" alt="" class="dept-badge">
+            </div>
+            <h3>General Medicine</h3>
+            <p>Care for adults with common medical problems such as fever, infections, diabetes and high blood pressure. Patients who need more tests or specialist care are advised on the next steps.</p>
+            <p class="dept-consultant-note">Consultant details: please call the hospital.</p>
+            <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
           </div>
-          <div class="card">
-            <h3><span class="tbc">TBC: Department 2</span></h3>
-            <p><span class="tbc">TBC: Brief description of this department.</span></p>
+
+          <!-- Orthopaedic Surgery -->
+          <div class="card dept-card">
+            <div class="dept-badge-wrap">
+              <img src="assets/icons/dept-orthopaedic.svg" width="96" height="96" alt="" class="dept-badge">
+            </div>
+            <h3>Orthopaedic Surgery</h3>
+            <p>Care for problems of the bones, joints, muscles and ligaments, such as fractures, injuries and joint or back pain. The department advises on treatment, including surgery where needed.</p>
+            <p class="dept-consultant-note">Consultant details: please call the hospital.</p>
+            <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
           </div>
-          <div class="card">
-            <h3><span class="tbc">TBC: Department 3</span></h3>
-            <p><span class="tbc">TBC: Brief description of this department.</span></p>
+
+          <!-- Dental -->
+          <div class="card dept-card">
+            <div class="dept-badge-wrap">
+              <img src="assets/icons/dept-dental.svg" width="96" height="96" alt="" class="dept-badge">
+            </div>
+            <h3>Dental</h3>
+            <p>Care for the teeth, gums and mouth, including check-ups and treatment of common problems such as tooth pain, cavities and gum disease.</p>
+            <p class="dept-consultant-note">Consultant details: please call the hospital.</p>
+            <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
           </div>
         </div>
 
-        <p style="text-align:center; margin-top:1.5rem;">
-          <a href="services.html" class="btn btn-outline">View All Services</a>
+        <p style="text-align:center; margin-top:2rem;">
+          <a href="services.html" class="btn btn-primary">View All Departments</a>
         </p>
       </div>
     </section>
 
-    <!-- ---- Doctors Preview ---- -->
-    <section class="section" aria-labelledby="doctors-heading">
+    <!-- ---- Doctors Preview (TBC Block) ---- -->
+    <section class="section tbc-block" aria-labelledby="doctors-heading">
       <div class="container">
         <h2 id="doctors-heading" class="section-title">Our Doctors</h2>
         <p class="section-subtitle">
@@ -154,7 +210,6 @@
         </p>
 
         <div class="card-grid">
-          <!-- Placeholder cards — replace with real doctor info -->
           <div class="card" style="text-align:center;">
             <div class="photo-placeholder" style="aspect-ratio:1/1; border-radius:50%; max-width:140px; margin:0 auto 1rem;">
               Photo coming soon
@@ -178,20 +233,19 @@
           </div>
         </div>
 
-        <p style="text-align:center; margin-top:1.5rem;">
+        <p style="text-align:center; margin-top:2rem;">
           <a href="doctors.html" class="btn btn-outline">Meet All Doctors</a>
         </p>
       </div>
     </section>
 
-    <!-- ---- Photo Gallery ---- -->
-    <section class="section section-alt" aria-labelledby="gallery-heading">
+    <!-- ---- Photo Gallery (TBC Block) ---- -->
+    <section class="section section-alt tbc-block" aria-labelledby="gallery-heading">
       <div class="container">
         <h2 id="gallery-heading" class="section-title">Our Hospital</h2>
         <p class="section-subtitle">A look inside Samarth Hospital</p>
 
         <div class="gallery-grid">
-          <!-- Placeholder images — replace with real hospital photos -->
           <div class="photo-placeholder">Photo coming soon</div>
           <div class="photo-placeholder">Photo coming soon</div>
           <div class="photo-placeholder">Photo coming soon</div>
@@ -202,14 +256,13 @@
       </div>
     </section>
 
-    <!-- ---- Latest Updates ---- -->
-    <section class="section" aria-labelledby="updates-heading">
+    <!-- ---- Latest Updates (TBC Block) ---- -->
+    <section class="section tbc-block" aria-labelledby="updates-heading">
       <div class="container">
         <h2 id="updates-heading" class="section-title">Latest Updates</h2>
 
         <!-- These are SAMPLE PLACEHOLDERS — replace with real announcements before launch -->
         <ul class="updates-list">
-          <!-- Easy to edit: copy a <li> block, change the date and text -->
           <li>
             <span class="update-date">Sample date</span>
             <span class="tbc">TBC: Sample placeholder — replace with a real announcement from the hospital</span>
@@ -256,7 +309,7 @@
 
         <!-- Thin stacked bar showing the four colour shares, with text legend -->
         <div class="share-bar-container" style="max-width:800px; margin:2rem auto 0;" role="region" aria-label="Waste category shares">
-          <h3 style="font-size:1rem; margin-bottom:0.75rem; text-align:center;">Waste Category Distribution (2025)*</h3>
+          <h3 style="font-size:1rem; margin-bottom:0.75rem; text-align:center; color:var(--navy-deep);">Waste Category Distribution (2025)*</h3>
           <div class="stacked-bar" role="img" aria-label="Waste category shares: Yellow 70 percent, Red 15 percent, White 6 percent, Blue 9 percent">
             <div class="bar-segment bar-yellow" style="width: 70%;" title="Yellow: 70%* (1,047.07 kg)">
               Yellow 70%
@@ -279,7 +332,7 @@
             <span class="legend-item"><span class="legend-swatch swatch-white"></span> <strong>White:</strong> 6% (89.75 kg)</span>
             <span class="legend-item"><span class="legend-swatch swatch-blue"></span> <strong>Blue:</strong> 9% (134.62 kg)</span>
           </div>
-          <p style="text-align:center; font-size:0.85rem; color:var(--color-text-light); margin-top:0.5rem;">
+          <p style="text-align:center; font-size:0.85rem; color:var(--grey); margin-top:0.5rem;">
             * Calculated from the printed figures
           </p>
         </div>
@@ -299,10 +352,13 @@
     <div class="container">
       <div class="footer-grid">
 
-        <!-- Column 1: About -->
+        <!-- Column 1: Logo & About -->
         <div>
-          <h4>Samarth Hospital</h4>
-          <p>A multi-speciality hospital in Pipariya, Madhya Pradesh.</p>
+          <div class="footer-logo-panel">
+            <img src="assets/images/logo-full.png" width="600" height="213" alt="Samarth Hospital - Saving lives with caring hands">
+          </div>
+          <p class="footer-tagline">A multi-speciality hospital in Pipariya, Madhya Pradesh.</p>
+          <p class="footer-timing-summary"><strong>OPD Timings:</strong><br>OPD Mon-Sat 11:00 AM-2:30 PM, 6:00-7:00 PM</p>
         </div>
 
         <!-- Column 2: Quick links -->
@@ -311,7 +367,7 @@
           <ul class="footer-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Departments</a></li>
             <li><a href="doctors.html">Doctors</a></li>
             <li><a href="environment.html">Environment</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -319,7 +375,7 @@
           </ul>
         </div>
 
-        <!-- Column 3: Contact -->
+        <!-- Column 3: Contact & Emergency -->
         <div>
           <h4>Contact Us</h4>
           <p>
@@ -327,10 +383,10 @@
             Maharana Pratap Ward, Pipariya,<br>
             Madhya Pradesh 461775
           </p>
-          <p style="margin-top:0.5rem;">
+          <p style="margin-top:0.6rem;">
             📞 <a href="tel:+918602565053">+91 86025 65053</a>
           </p>
-          <p style="margin-top:0.5rem;">
+          <p style="margin-top:0.6rem;">
             <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927"
                target="_blank" rel="noopener noreferrer">
               📍 Get Directions
@@ -347,17 +403,21 @@
         </p>
       </div>
     </div>
+    <!-- Thin bottom gradient strip -->
+    <div class="footer-strip" aria-hidden="true"></div>
   </footer>
 
   <!-- ============================================================
        STICKY MOBILE CALL BAR — visible on phones, hidden on desktop
        ============================================================ -->
   <div class="call-bar" role="complementary" aria-label="Call hospital">
-    <a href="tel:+918602565053">📞 Call Samarth Hospital</a>
+    <div class="call-bar-inner">
+      <span class="call-bar-label">Call Samarth Hospital</span>
+      <a href="tel:+918602565053" class="btn btn-call btn-call-sm">Call now</a>
+    </div>
   </div>
 
   <!-- JavaScript (relative path) -->
   <script src="js/main.js"></script>
 </body>
 </html>
-
