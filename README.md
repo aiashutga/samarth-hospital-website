@@ -23,7 +23,8 @@ samarth-hospital-website/
 ├── css/
 │   └── style.css           All styles (theme variables at top, launch mode at bottom)
 ├── js/
-│   └── main.js             Mobile menu toggle, contact form handler
+│   ├── main.js             Mobile menu toggle, contact form handler
+│   └── environment.js      Year tab switching & keyboard navigation for environment report
 ├── assets/
 │   ├── images/             Hospital logo, emblem, favicons, og-share
 │   │   ├── logo-full.png        Full logo (600x213, transparent, light bg only)
@@ -108,22 +109,31 @@ If you need to launch the website before all placeholders (such as doctor photos
 
 See **[TODO-before-launch.md](TODO-before-launch.md)** for the full checklist of items that need to be completed, confirmed, or replaced before the site goes public.
 
-## How to Update the Environment Report Each Year
+## How to Add a New Year to the Environment Report
 
-The hospital records its bio-medical waste quantities monthly under four colour categories (Yellow, Red, White, Blue) and files an annual return for 1 January to 31 December.
+The hospital records its bio-medical waste quantities monthly under four colour categories (Yellow, Red, White, Blue) in an annual statement for 1 January to 31 December. Liquid waste treated in the in-house Effluent Treatment Plant (ETP) is recorded annually in litres.
 
-When a new annual statement is prepared:
-1. Open **`environment.html`**:
-   - Update the period in the summary paragraph, header subtitle, and "Report Details" box.
-   - Update the 12 monthly table rows with the new quantities (Yellow, Red, White, Blue, Total).
-   - Update the printed annual total, monthly average, and daily average rows in the table footer (`<tfoot>`).
+When a new annual statement is prepared (e.g. for 2026):
+
+1. **Add a new tab panel in `environment.html`**:
+   - Duplicate an existing `<div class="year-tabpanel" role="tabpanel" id="panel-YYYY" aria-labelledby="tab-YYYY">` block.
+   - Update the year in headings, summary cards, report details box, and liquid waste box.
+   - Update the 12 monthly table rows with the new data from the hospital statement.
+   - Update the printed annual total, monthly average, and daily average rows in `<tfoot>`.
    - Update the Treatment & Disposal Summary table (Incineration vs. Autoclaving).
-   - Update the monthly bar chart widths and labels (adjust highest/lowest month tags).
-   - Update the percentage shares in the category stacked bar and text legend.
-2. Open **`index.html`**:
-   - Update the four key-figure cards in the "Environment Protection & Bio-Medical Waste Management" section (Period, Approx. total, Treatment, Handed to).
-   - Update the category distribution stacked bar and text legend.
-3. Verify figures: Always use the printed figures from the official annual statement; mark calculated totals/percentages with `*` and keep the explanatory note.
+   - Update the monthly bar chart widths (`width: X%`) based on the highest month of that year.
+   - Set `hidden` attribute on older panels if the new year is the default active tab.
+
+2. **Add a new tab button in `environment.html`**:
+   - In `<div class="year-tabs-nav" role="tablist">`, add a new `<button role="tab" id="tab-YYYY" aria-controls="panel-YYYY" aria-selected="true" tabindex="0">YYYY</button>`.
+   - Update the previous active tab button to `aria-selected="false"` and `tabindex="-1"`.
+
+3. **Add the new year's row to the overview charts**:
+   - In **`environment.html`** ("Three Years at a Glance") and **`index.html`** ("Environment Protection & Bio-Medical Waste Management"):
+     - In **Solid Waste (Chart 1)**: add an `.annual-bar-row` with the year label, stacked segments (`.bar-yellow`, `.bar-red`, `.bar-white`, `.bar-blue` with widths proportional to the chart max), and total kg.
+     - In **Liquid Waste (Chart 2)**: add an `.annual-bar-row` with the year label, single `.liquid-bar-fill` (width proportional to chart max, e.g. 15,000 L), and total litres.
+
+4. **Check all figures**: Always use the printed figures from the hospital's annual statement; mark calculated totals or averages with `*` and retain the explanatory note. Use neutral language without comparative adjectives (e.g. avoid words like "increase", "decrease", "improved", or "better").
 
 ## Licence
 
