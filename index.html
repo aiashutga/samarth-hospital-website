@@ -28,6 +28,9 @@
 
   <!-- Stylesheet (relative path for GitHub Pages compatibility) -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Shared Lightbox (defer) -->
+  <script src="js/gallery.js" defer></script>
 </head>
 <body>
 
@@ -52,6 +55,7 @@
         <a href="services.html">Departments</a>
         <span class="tbc-block"><a href="doctors.html">Doctors</a></span>
         <a href="environment.html">Environment</a>
+        <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
 
@@ -77,6 +81,7 @@
       <a href="services.html">Departments</a>
       <span class="tbc-block"><a href="doctors.html">Doctors</a></span>
       <a href="environment.html">Environment</a>
+      <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
       <a href="tel:+918602565053" class="mobile-call-link">📞 Call +91 86025 65053</a>
     </nav>
@@ -90,17 +95,31 @@
     <!-- ---- Hero Section ---- -->
     <section class="hero">
       <div class="container hero-container">
-        <div class="hero-content">
-          <h1>Samarth Hospital</h1>
-          <p class="hero-tagline">Saving lives with caring hands</p>
-          <p class="hero-desc">Multi-speciality hospital in Pipariya, Madhya Pradesh</p>
-          <div class="hero-buttons">
-            <a href="tel:+918602565053" class="btn btn-call">📞 Call Now</a>
-            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927"
-               class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-              📍 Get Directions
-            </a>
+        <div class="hero-grid">
+          <div class="hero-content">
+            <h1>Samarth Hospital</h1>
+            <p class="hero-tagline">Saving lives with caring hands</p>
+            <p class="hero-desc">Multi-speciality hospital in Pipariya, Madhya Pradesh</p>
+            <div class="hero-buttons">
+              <a href="tel:+918602565053" class="btn btn-call">📞 Call Now</a>
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=22.762863,78.354927"
+                 class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                📍 Get Directions
+              </a>
+            </div>
           </div>
+          <figure class="hero-photo">
+            <div class="hero-photo-frame">
+              <img src="assets/images/photos/hospital-building-front.jpg"
+                   alt="Front of the Samarth Hospital building with the hospital signboard above the entrance"
+                   width="582" height="1296"
+                   loading="eager"
+                   fetchpriority="high"
+                   decoding="async"
+                   class="hero-photo-img">
+            </div>
+            <figcaption class="hero-photo-caption">Hospital building, front</figcaption>
+          </figure>
         </div>
         <!-- Decorative emblem (desktop only) -->
         <img src="assets/images/logo-emblem.png" class="hero-emblem" alt="" aria-hidden="true" width="384" height="384">
@@ -185,9 +204,16 @@
 
           <!-- Dental -->
           <div class="card dept-card">
-            <div class="dept-badge-wrap">
-              <img src="assets/icons/dept-dental.svg" width="96" height="96" alt="" class="dept-badge">
-            </div>
+            <figure class="dept-photo-wrap">
+              <div class="dept-photo-frame">
+                <img src="assets/images/photos/dental-room.jpg"
+                     alt="Dental room with a dental chair"
+                     width="1296" height="582"
+                     loading="lazy"
+                     decoding="async">
+              </div>
+              <figcaption class="dept-photo-caption">Dental room</figcaption>
+            </figure>
             <h3>Dental</h3>
             <p>Care for the teeth, gums and mouth, including check-ups and treatment of common problems such as tooth pain, cavities and gum disease.</p>
             <p class="dept-consultant-note">Consultant details: please call the hospital.</p>
@@ -239,20 +265,89 @@
       </div>
     </section>
 
-    <!-- ---- Photo Gallery (TBC Block) ---- -->
-    <section class="section section-alt tbc-block" aria-labelledby="gallery-heading">
+    <!-- ---- Photo Gallery: A look inside the hospital ---- -->
+    <section class="section section-alt" aria-labelledby="gallery-heading">
       <div class="container">
-        <h2 id="gallery-heading" class="section-title">Our Hospital</h2>
-        <p class="section-subtitle">A look inside Samarth Hospital</p>
+        <h2 id="gallery-heading" class="section-title">A look inside the hospital</h2>
+        <p class="section-subtitle">Photographs of rooms and facilities at Samarth Hospital, Pipariya.</p>
 
-        <div class="gallery-grid">
-          <div class="photo-placeholder">Photo coming soon</div>
-          <div class="photo-placeholder">Photo coming soon</div>
-          <div class="photo-placeholder">Photo coming soon</div>
-          <div class="photo-placeholder">Photo coming soon</div>
-          <div class="photo-placeholder">Photo coming soon</div>
-          <div class="photo-placeholder">Photo coming soon</div>
+        <div class="gallery-grid-home">
+          <!-- 1. Operation theatre -->
+          <a href="assets/images/photos/operation-theatre.jpg" class="gallery-tile" data-caption="Operation theatre">
+            <div class="gallery-tile-frame">
+              <img src="assets/images/photos/operation-theatre.jpg"
+                   alt="Operation theatre with an operating table and equipment"
+                   width="1296" height="582"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+            <p class="gallery-tile-caption">Operation theatre</p>
+          </a>
+
+          <!-- 2. Patient ward -->
+          <a href="assets/images/photos/patient-ward.jpg" class="gallery-tile" data-caption="Patient ward">
+            <div class="gallery-tile-frame">
+              <img src="assets/images/photos/patient-ward.jpg"
+                   alt="Patient ward with beds and curtains"
+                   width="1296" height="582"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+            <p class="gallery-tile-caption">Patient ward</p>
+          </a>
+
+          <!-- 3. Dental room -->
+          <a href="assets/images/photos/dental-room.jpg" class="gallery-tile" data-caption="Dental room">
+            <div class="gallery-tile-frame">
+              <img src="assets/images/photos/dental-room.jpg"
+                   alt="Dental room with a dental chair"
+                   width="1296" height="582"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+            <p class="gallery-tile-caption">Dental room</p>
+          </a>
+
+          <!-- 4. Consultation room -->
+          <a href="assets/images/photos/consultation-room.jpg" class="gallery-tile" data-caption="Consultation room">
+            <div class="gallery-tile-frame">
+              <img src="assets/images/photos/consultation-room.jpg"
+                   alt="Consultation room with a desk and chairs"
+                   width="1296" height="582"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+            <p class="gallery-tile-caption">Consultation room</p>
+          </a>
+
+          <!-- 5. Pathology lab -->
+          <a href="assets/images/photos/pathology-lab.jpg" class="gallery-tile" data-caption="Pathology lab">
+            <div class="gallery-tile-frame">
+              <img src="assets/images/photos/pathology-lab.jpg"
+                   alt="Pathology lab with equipment on the work counters"
+                   width="1296" height="582"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+            <p class="gallery-tile-caption">Pathology lab</p>
+          </a>
+
+          <!-- 6. X-ray room -->
+          <a href="assets/images/photos/x-ray-room.jpg" class="gallery-tile" data-caption="X-ray room">
+            <div class="gallery-tile-frame">
+              <img src="assets/images/photos/x-ray-room.jpg"
+                   alt="X-ray room with a mobile X-ray unit and an examination table"
+                   width="1200" height="900"
+                   loading="lazy"
+                   decoding="async">
+            </div>
+            <p class="gallery-tile-caption">X-ray room</p>
+          </a>
         </div>
+
+        <p style="text-align:center; margin-top:2rem;">
+          <a href="gallery.html" class="btn btn-primary">View all photos</a>
+        </p>
       </div>
     </section>
 
@@ -405,6 +500,7 @@
             <li><a href="services.html">Departments</a></li>
             <li class="tbc-block"><a href="doctors.html">Doctors</a></li>
             <li><a href="environment.html">Environment</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy.html">Privacy &amp; Disclaimer</a></li>
           </ul>

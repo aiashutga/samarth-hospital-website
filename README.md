@@ -18,21 +18,24 @@ samarth-hospital-website/
 ├── services.html           Departments (nav label: "Departments")
 ├── doctors.html            Our doctors
 ├── environment.html        Bio-medical waste management & environment report
+├── gallery.html            Photo gallery
 ├── contact.html            Contact, OPD timings, map & enquiry form
 ├── privacy.html            Privacy policy & medical disclaimer
 ├── css/
 │   └── style.css           All styles (theme variables at top, launch mode at bottom)
 ├── js/
 │   ├── main.js             Mobile menu toggle, contact form handler
-│   └── environment.js      Year tab switching & keyboard navigation for environment report
+│   ├── environment.js      Year tab switching & keyboard navigation for environment report
+│   └── gallery.js          Photo gallery lightbox with progressive enhancement
 ├── assets/
-│   ├── images/             Hospital logo, emblem, favicons, og-share
+│   ├── images/             Hospital logo, emblem, favicons, og-share, photos
 │   │   ├── logo-full.png        Full logo (600x213, transparent, light bg only)
 │   │   ├── logo-emblem.png      Emblem (384x384 circle)
 │   │   ├── favicon.ico          Favicon (multi-size)
 │   │   ├── favicon-32.png       Favicon 32x32 PNG
 │   │   ├── apple-touch-icon.png Touch icon (180x180)
-│   │   └── og-share.png         Open Graph preview image (1200x630)
+│   │   ├── og-share.png         Open Graph preview image (1200x630)
+│   │   └── photos/              Hospital photos (13 JPGs) & PHOTOS.md
 │   └── icons/              Department badges (96x96 SVG)
 │       ├── dept-general-medicine.svg
 │       ├── dept-orthopaedic.svg
@@ -48,6 +51,12 @@ samarth-hospital-website/
 - **Favicons & Apple Touch Icon**: `assets/images/favicon.ico`, `assets/images/favicon-32.png`, and `assets/images/apple-touch-icon.png`.
 - **Social Media Share Card**: `assets/images/og-share.png` (1200x630 PNG). Linked in `<head>` via `og:image` and `twitter:image`.
 - **Department Badges**: `assets/icons/dept-general-medicine.svg`, `dept-orthopaedic.svg`, `dept-dental.svg`.
+
+## Photos
+
+Hospital photographs are stored in `assets/images/photos/`. See `assets/images/photos/PHOTOS.md` for the full inventory of photos, image dimensions, and captions.
+
+**Privacy rule:** Faces of patients, visitors, and staff, as well as vehicle number plates, must be blurred in all public photos before use. Never publish unblurred photos of people. Do not edit, re-compress, or replace these photos without maintaining the same privacy protections.
 
 ## How to Change Colours (Design System)
 

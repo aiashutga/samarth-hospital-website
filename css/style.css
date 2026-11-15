@@ -481,6 +481,60 @@ a:focus {
   gap: 0.85rem;
 }
 
+/* Hero Grid: 2 columns on desktop, stacked on mobile */
+.hero-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 860px) {
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+  }
+  .hero-grid .hero-content {
+    margin: 0;
+    text-align: left;
+  }
+  .hero-grid .hero-buttons {
+    justify-content: flex-start;
+  }
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.hero-photo-frame {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  background-color: var(--tint);
+}
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 48%;
+  display: block;
+}
+.hero-photo-caption {
+  font-size: 0.88rem;
+  color: #4A5568;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
 /* Decorative emblem on desktop (>900px, 8% opacity) */
 .hero-emblem {
   display: none;
@@ -681,6 +735,175 @@ a:focus {
   border-radius: var(--radius);
   aspect-ratio: 4 / 3;
   padding: 1rem;
+}
+
+/* Framed Photos (standalone figures) */
+.photo-frame-16-9 {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background-color: var(--tint);
+  box-shadow: var(--shadow-sm);
+}
+.photo-frame-16-9 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.photo-frame-4-5 {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background-color: var(--tint);
+  box-shadow: var(--shadow-sm);
+}
+.photo-frame-4-5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 48%;
+  display: block;
+}
+.photo-caption {
+  font-size: 0.88rem;
+  color: #4A5568;
+  margin-top: 0.45rem;
+  text-align: center;
+}
+
+/* Department Photo (Dental card) */
+.dept-photo-wrap {
+  margin-bottom: 1rem;
+}
+.dept-photo-frame {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background-color: var(--tint);
+}
+.dept-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.dept-photo-caption {
+  font-size: 0.85rem;
+  color: #4A5568;
+  margin-top: 0.35rem;
+  text-align: center;
+}
+
+/* Home Page Gallery Grid (3 cols desktop, 2 tablet, 1 mobile) */
+.gallery-grid-home {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 600px) {
+  .gallery-grid-home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .gallery-grid-home {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Gallery Page Groups & Grids */
+.gallery-group {
+  margin-bottom: 2.75rem;
+}
+.gallery-group:last-child {
+  margin-bottom: 0;
+}
+.gallery-group-title {
+  font-size: clamp(1.2rem, 3vw, 1.45rem);
+  color: var(--navy-deep);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--line);
+}
+.gallery-group-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 600px) {
+  .gallery-group-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .gallery-group-grid.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Interactive Gallery Tiles (shared between home & gallery pages) */
+.gallery-tile {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.gallery-tile:hover,
+.gallery-tile:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+.gallery-tile-frame {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--tint);
+}
+.gallery-tile-frame.frame-4-5 {
+  aspect-ratio: 4 / 5;
+}
+.gallery-tile-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+.gallery-tile-frame.frame-4-5 img {
+  object-position: 50% 48%;
+}
+.gallery-tile:hover .gallery-tile-frame img {
+  transform: scale(1.02);
+}
+.gallery-tile-caption {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy-deep);
+  text-align: center;
+  border-top: 1px solid var(--line);
+  margin: 0;
+  background: var(--white);
+}
+.gallery-privacy-note {
+  font-size: 0.9rem;
+  color: #4A5568;
+  margin-top: 0.35rem;
 }
 
 .gallery-grid {
@@ -1517,7 +1740,136 @@ a:focus {
   display: none !important;
 }
 
-/* ---------- 18. Print Styles ---------- */
+/* ---------- 18. Gallery Dialog / Lightbox ---------- */
+.gallery-dialog {
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  padding: 0;
+  max-width: 95vw;
+  max-height: 95vh;
+  margin: auto;
+  overflow: visible;
+}
+.gallery-dialog::backdrop {
+  background: rgba(10, 42, 107, 0.88);
+}
+.gallery-dialog-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow: hidden;
+}
+.gallery-dialog-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0B1320;
+  overflow: hidden;
+  max-height: calc(90vh - 70px);
+  position: relative;
+}
+.gallery-dialog-img {
+  max-width: 100%;
+  max-height: calc(90vh - 70px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.gallery-dialog-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  gap: 1rem;
+}
+.gallery-dialog-caption {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy-deep);
+  margin: 0;
+}
+.gallery-dialog-counter {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4A5568;
+  white-space: nowrap;
+}
+.gallery-dialog-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background: rgba(10, 42, 107, 0.85);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  z-index: 10;
+}
+.gallery-dialog-btn:hover {
+  background: var(--navy);
+}
+.gallery-dialog-btn:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 2px;
+}
+.gallery-dialog-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.65);
+}
+.gallery-dialog-close:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.gallery-dialog-prev,
+.gallery-dialog-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+}
+.gallery-dialog-prev {
+  left: 10px;
+}
+.gallery-dialog-next {
+  right: 10px;
+}
+.gallery-dialog-prev:hover,
+.gallery-dialog-next:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-tile,
+  .gallery-tile:hover,
+  .gallery-tile-frame img,
+  .gallery-tile:hover .gallery-tile-frame img,
+  .gallery-dialog-btn {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- 19. Print Styles ---------- */
 @media print {
   .site-header,
   .call-bar,
@@ -1528,7 +1880,8 @@ a:focus {
   .hero-wave,
   .hero-emblem,
   .footer-strip,
-  .year-tabs-nav {
+  .year-tabs-nav,
+  .gallery-dialog {
     display: none !important;
   }
   .js-tabs-enabled .year-tabpanel:not(.is-active) {

@@ -27,8 +27,12 @@
 - [ ] **Liquid waste measurement clarification** — Clarify with hospital administration what exactly the liquid waste figure counts (e.g. liquid waste from OT, lab, laundry, floor washing) and how it is measured (flow meter readings, batch tank logs, or estimates).
 - [ ] **ETP technical details & water testing** — Obtain technical specifications for the in-house Effluent Treatment Plant (ETP), including daily treatment capacity, disinfection method (e.g., sodium hypochlorite dosing), and periodic laboratory test reports for garden use.
 - [ ] **State Pollution Control Board authorisation number** — Confirm State Pollution Control Board authorisation number and validity period from the hospital for the environment report.
-- [ ] **Hospital photos** — Replace all grey "Photo coming soon" placeholder boxes with real photos of the hospital (building, reception, rooms, equipment, etc.).
-- [ ] **Department photos** — Replace SVG badges (`assets/icons/*.svg`) with real photos of the departments/facilities when the owner provides them.
+- [x] **Hospital photos** — 13 processed photos placed in `assets/images/photos/` and displayed across home, gallery, services, about, and contact pages.
+- [ ] **Photo room name captions confirmation** — Client to confirm room names used in captions: Operation theatre, Pathology lab, X-ray room, Patient ward, Dental room, Consultation room, Reception.
+- [ ] **Blurred reception & waiting hall photos confirmation** — Client to confirm he is okay with the blurred reception and waiting hall photos.
+- [ ] **Original-quality photos request** — Ask the client for original-quality photos (sent as "Document" on WhatsApp). Keep the same file names, and blur faces and number plates again before use.
+- [ ] **Pending department photos** — General Medicine and Orthopaedic photos are still pending.
+- [ ] **Department photos** — Replace SVG badges (`assets/icons/*.svg`) with real photos of the departments/facilities when the owner provides them (Dental room photo integrated; General Medicine and Orthopaedic pending).
 - [ ] **Launch mode switch** — If any unconfirmed items remain at launch time, activate Launch mode by uncommenting the rule at the bottom of `css/style.css` (`.tbc-block { display: none !important; }`).
 - [x] **Custom domain setup** — Custom domain `samarth-hospital.com` configured on GitHub Pages with `CNAME` in repo.
 
@@ -56,4 +60,4 @@
 
 ---
 
-*Last updated: 13 November 2026 (Phase 3B)*
+*Last updated: 15 November 2026 (Phase 4)*
