@@ -776,31 +776,6 @@ a:focus {
   text-align: center;
 }
 
-/* Department Photo (Dental card) */
-.dept-photo-wrap {
-  margin-bottom: 1rem;
-}
-.dept-photo-frame {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background-color: var(--tint);
-}
-.dept-photo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.dept-photo-caption {
-  font-size: 0.85rem;
-  color: #4A5568;
-  margin-top: 0.35rem;
-  text-align: center;
-}
-
 /* Home Page Gallery Grid (3 cols desktop, 2 tablet, 1 mobile) */
 .gallery-grid-home {
   display: grid;
@@ -817,8 +792,11 @@ a:focus {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.gallery-grid-home .gallery-tile-frame {
+  aspect-ratio: 16 / 9;
+}
 
-/* Gallery Page Groups & Grids */
+/* Gallery Page Groups & Grids (Phase 4b: even flex layout) */
 .gallery-group {
   margin-bottom: 2.75rem;
 }
@@ -834,18 +812,30 @@ a:focus {
   border-bottom: 2px solid var(--line);
 }
 .gallery-group-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.gallery-group-grid .gallery-tile {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  align-self: flex-start;
 }
 @media (min-width: 600px) {
-  .gallery-group-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .gallery-group-grid .gallery-tile {
+    flex: 0 0 calc((100% - 20px) / 2);
+    width: calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
   }
 }
-@media (min-width: 900px) {
-  .gallery-group-grid.cols-4 {
-    grid-template-columns: repeat(4, 1fr);
+@media (min-width: 1024px) {
+  .gallery-group-grid .gallery-tile {
+    flex: 0 0 calc((100% - 40px) / 3);
+    width: calc((100% - 40px) / 3);
+    max-width: calc((100% - 40px) / 3);
   }
 }
 
@@ -861,6 +851,7 @@ a:focus {
   border: 1px solid var(--line);
   box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 .gallery-tile:hover,
 .gallery-tile:focus-visible {
@@ -869,28 +860,28 @@ a:focus {
   text-decoration: none;
 }
 .gallery-tile-frame {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 2;
   width: 100%;
   overflow: hidden;
   background-color: var(--tint);
-}
-.gallery-tile-frame.frame-4-5 {
-  aspect-ratio: 4 / 5;
 }
 .gallery-tile-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 50%;
   display: block;
   transition: transform 0.25s ease;
 }
-.gallery-tile-frame.frame-4-5 img {
-  object-position: 50% 48%;
+.gallery-tile-frame img.gallery-img-building-front,
+.gallery-img-building-front {
+  object-position: 50% 52%;
 }
 .gallery-tile:hover .gallery-tile-frame img {
   transform: scale(1.02);
 }
-.gallery-tile-caption {
+.gallery-tile-caption,
+.page-content p.gallery-tile-caption {
   padding: 0.75rem 1rem;
   font-size: 0.95rem;
   font-weight: 600;
@@ -898,6 +889,8 @@ a:focus {
   text-align: center;
   border-top: 1px solid var(--line);
   margin: 0;
+  margin-bottom: 0;
+  max-width: 100%;
   background: var(--white);
 }
 .gallery-privacy-note {
@@ -1750,6 +1743,9 @@ a:focus {
   max-height: 95vh;
   margin: auto;
   overflow: visible;
+}
+.gallery-dialog:not([open]) {
+  display: none !important;
 }
 .gallery-dialog::backdrop {
   background: rgba(10, 42, 107, 0.88);
