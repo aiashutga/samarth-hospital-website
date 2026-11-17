@@ -101,7 +101,7 @@
         <!-- Resident doctors -->
         <section aria-labelledby="resident-doctors-heading">
           <h2 id="resident-doctors-heading">Resident doctors</h2>
-          <div class="doctors-grid-2" style="max-width:760px;">
+          <div class="doctors-grid">
             <!-- Dr. Tanay Surjan -->
             <div class="card doctor-card">
               <div class="doctor-photo-frame">
@@ -115,6 +115,23 @@
               <p class="doctor-qualification">MBBS, MD (General Medicine)</p>
               <p class="doctor-speciality">Speciality: General Medicine</p>
               <p class="doctor-experience">11 years of experience</p>
+              <p class="doctor-timing-note">For days and timings, please call the hospital.</p>
+              <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
+            </div>
+
+            <!-- Dr. Nidhi Surjan -->
+            <div class="card doctor-card">
+              <!-- PHOTO PENDING: when the photo arrives, save it as assets/images/doctors/dr-nidhi-surjan.jpg (600x750, 4:5, head-and-shoulders, same framing as the other two portraits) and replace this placeholder block with the same <img> markup used for the other resident doctors, alt="Portrait of Dr. Nidhi Surjan". -->
+              <div class="doctor-photo-frame doctor-photo-placeholder">
+                <div class="doctor-placeholder-inner">
+                  <img src="assets/icons/doctor-avatar.svg" width="96" height="96" alt="" class="doctor-avatar">
+                  <div class="tbc-block"><p class="doctor-placeholder-text">Photo coming soon</p></div>
+                </div>
+              </div>
+              <h3 class="doctor-name">Dr. Nidhi Surjan</h3>
+              <p class="doctor-qualification">BDS</p>
+              <p class="doctor-speciality">Speciality: Dentist</p>
+              <p class="doctor-experience">12 years of experience</p>
               <p class="doctor-timing-note">For days and timings, please call the hospital.</p>
               <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
             </div>
@@ -141,8 +158,8 @@
         <!-- Visiting consultants -->
         <section style="margin-top:3rem;" aria-labelledby="visiting-consultants-heading">
           <h2 id="visiting-consultants-heading">Visiting consultants</h2>
-          <p>Visiting consultants and their visiting schedule.</p>
-          <div class="doctors-grid-3">
+          <p class="visiting-schedule-intro">Visiting consultants and their visiting schedule.</p>
+          <div class="doctors-grid">
             <!-- Dr. Sumit Bhatnagar -->
             <div class="card doctor-card" style="text-align:center;">
               <div class="doctor-avatar-wrap">
@@ -175,21 +192,7 @@
           </div>
 
           <div style="margin-top:1.5rem; text-align:center;">
-            <p style="margin-bottom:1rem;">Please call to confirm the date before you visit.</p>
-            <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
-          </div>
-        </section>
-
-        <!-- Dental department -->
-        <section style="margin-top:3rem;" aria-labelledby="dental-heading">
-          <h2 id="dental-heading">Dental department</h2>
-          <div class="card dept-card" style="max-width:400px; margin-top:1.5rem;">
-            <div class="dept-badge-wrap">
-              <img src="assets/icons/dept-dental.svg" width="96" height="96" alt="" class="dept-badge">
-            </div>
-            <h3>Dental</h3>
-            <p>Care for the teeth, gums and mouth, including check-ups and treatment of common problems such as tooth pain, cavities and gum disease.</p>
-            <p class="dept-consultant-note">Consultant details: please call the hospital.</p>
+            <p class="visiting-confirm-note" style="margin-bottom:1rem;">Please call to confirm the date before you visit.</p>
             <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
           </div>
         </section>
@@ -255,7 +258,7 @@
       <div class="footer-bottom">
         <p>&copy; 2026 Samarth Hospital. All rights reserved.</p>
         <p class="footer-emergency">
-          For a medical emergency, call the hospital or go to the nearest emergency department.
+          In an emergency, do not wait for an appointment. Go straight to the Casualty room.
         </p>
       </div>
     </div>

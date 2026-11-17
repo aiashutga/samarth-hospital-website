@@ -58,6 +58,29 @@ Hospital photographs are stored in `assets/images/photos/`. See `assets/images/p
 
 **Privacy rule:** Faces of patients, visitors, and staff, as well as vehicle number plates, must be blurred in all public photos before use. Never publish unblurred photos of people. Do not edit, re-compress, or replace these photos without maintaining the same privacy protections.
 
+### Doctor Portraits
+
+Resident doctor portraits are stored in `assets/images/doctors/`.
+
+**Portrait specification:**
+- Dimensions: 600×750 pixels (4:5 aspect ratio).
+- Composition: head-and-shoulders portrait.
+- Eye line: eyes positioned at approximately 28% from the top of the frame.
+- Face width: face width approximately 35% of the frame.
+- Framing: all portraits must share the same eye line, chin position, and face size so they render consistently without CSS overrides.
+
+**Three steps to replace Dr. Nidhi Surjan's placeholder:**
+1. Save the new portrait as `assets/images/doctors/dr-nidhi-surjan.jpg` (600×750, 4:5, head-and-shoulders, matching the portrait specification above).
+2. In `doctors.html`, locate the `PHOTO PENDING` comment in Dr. Nidhi Surjan's card and replace the `.doctor-photo-placeholder` block with:
+   ```html
+   <img src="assets/images/doctors/dr-nidhi-surjan.jpg"
+        alt="Portrait of Dr. Nidhi Surjan"
+        width="600" height="750"
+        loading="lazy"
+        decoding="async">
+   ```
+3. In `index.html`, locate the `PHOTO PENDING` comment in the doctors preview and replace the `.doctor-photo-placeholder` block with the same `<img>` tag inside `<div class="doctor-photo-frame doctor-photo-frame-sm">`.
+
 ## How to Change Colours (Design System)
 
 All brand colours are defined as CSS variables at the top of **`css/style.css`** under the `:root` selector:

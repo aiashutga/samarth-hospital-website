@@ -2032,31 +2032,32 @@ a:focus {
 }
 
 /* ---------- Doctors Grid & Cards ---------- */
-.doctors-grid-2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+.doctors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
   margin-top: 1.5rem;
 }
-@media (min-width: 640px) {
-  .doctors-grid-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-.doctors-grid-3 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+.doctors-grid .doctor-card {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 @media (min-width: 600px) {
-  .doctors-grid-3 {
-    grid-template-columns: repeat(2, 1fr);
+  .doctors-grid .doctor-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    width: calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
   }
 }
-@media (min-width: 900px) {
-  .doctors-grid-3 {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 1024px) {
+  .doctors-grid .doctor-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    width: calc((100% - 40px) / 3);
+    max-width: calc((100% - 40px) / 3);
   }
 }
 
@@ -2068,7 +2069,7 @@ a:focus {
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: var(--shadow-sm);
-  height: 100%;
+  height: auto;
 }
 .doctor-photo-frame {
   aspect-ratio: 4 / 5;
@@ -2085,11 +2086,38 @@ a:focus {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 20%;
+  object-position: 50% 50%;
   display: block;
 }
 .doctor-photo-frame-sm {
   max-width: 200px;
+}
+.doctor-photo-placeholder {
+  background-color: var(--tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doctor-placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+.doctor-placeholder-inner .doctor-avatar {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+.doctor-placeholder-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  text-align: center;
 }
 .doctor-name {
   font-size: 1.25rem;
@@ -2119,6 +2147,9 @@ a:focus {
   margin-top: auto;
   margin-bottom: 1.25rem;
 }
+.doctor-card .dept-call-btn {
+  margin-top: 0;
+}
 .doctor-schedule {
   font-size: 0.95rem;
   font-weight: 600;
@@ -2135,6 +2166,11 @@ a:focus {
   width: 100%;
   height: 100%;
   display: block;
+}
+.visiting-schedule-intro,
+.visiting-confirm-note {
+  color: var(--grey);
+  font-size: 1.05rem;
 }
 
 /* ---------- 19. Print Styles ---------- */
