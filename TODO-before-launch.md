@@ -8,6 +8,9 @@
 ## 🔴 Must Do (Blocking Launch)
 
 - [ ] **Remove `<meta name="robots" content="noindex">`** from every HTML page once the site is ready to be indexed by search engines.
+- [ ] **Remove noindex from new pages at launch** — Remove the noindex tag from the two new pages at launch (they are in the page list).
+- [ ] **Adult Vaccination page review** — Client to review the Adult Vaccination page (English translation and the 'general information' sentence).
+- [ ] **Insulin and inhaler material** — Client to send insulin and inhaler material, or approve ones we suggest.
 - [x] **Hospital logo & branding** — Assets placed in `assets/images/` (`logo-full.png`, `logo-emblem.png`, `favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`, `og-share.png`) and updated across all page headers and footers.
 - [x] **Hospital tagline, motto, vision & mission** — Added to `about.html` as provided by client (English & Hindi).
 - [ ] **Hindi text review** — Hindi booking, vision and mission text to be checked by someone who reads Hindi.
@@ -64,4 +67,4 @@
 
 ---
 
-*Last updated: 17 November 2026 (Phase 2)*
+*Last updated: 17 November 2026 (Phase 3A)*

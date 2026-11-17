@@ -286,6 +286,7 @@ a:focus {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.15s ease;
 }
 .main-nav a::after {
@@ -312,6 +313,28 @@ a:focus {
 }
 .main-nav a[aria-current="page"] {
   color: var(--navy-deep);
+}
+
+@media (min-width: 769px) and (max-width: 1240px) {
+  .site-header .container {
+    width: 95%;
+  }
+  .main-nav {
+    gap: 0.1rem;
+  }
+  .main-nav a {
+    padding: 0.45rem 0.42rem;
+    font-size: 0.84rem;
+  }
+  .main-nav a::after {
+    left: 0.42rem;
+    right: 0.42rem;
+  }
+  .header-call-btn {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.85rem;
+    margin-left: 0.25rem;
+  }
 }
 
 /* Call button in header (desktop only) */
@@ -650,18 +673,33 @@ a:focus {
 
 /* ---------- 11. Cards ---------- */
 .card-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+.card-grid > .card,
+.card-grid > * {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 @media (min-width: 600px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .card-grid > .card,
+  .card-grid > * {
+    flex: 0 0 calc((100% - 20px) / 2);
+    width: calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
   }
 }
-@media (min-width: 900px) {
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 1024px) {
+  .card-grid > .card,
+  .card-grid > * {
+    flex: 0 0 calc((100% - 40px) / 3);
+    width: calc((100% - 40px) / 3);
+    max-width: calc((100% - 40px) / 3);
   }
 }
 
@@ -2239,6 +2277,12 @@ a:focus {
     background: none !important;
     border: 0 !important;
     padding: 0.5rem 0 1rem !important;
+  }
+  .card-grid .card,
+  .card,
+  .vaccination-note-box {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 }
 

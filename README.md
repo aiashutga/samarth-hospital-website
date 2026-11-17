@@ -17,6 +17,8 @@ samarth-hospital-website/
 ├── about.html              About the hospital
 ├── services.html           Departments (nav label: "Departments")
 ├── doctors.html            Our doctors
+├── patient-education.html  Patient education overview
+├── education-adult-vaccination.html Adult vaccination guide
 ├── bmw-management.html     Bio-medical waste management report
 ├── gallery.html            Photo gallery
 ├── contact.html            Contact, OPD timings, directions & call details
@@ -181,6 +183,24 @@ When a new annual statement is prepared (e.g. for 2026):
      - In **Liquid Waste (Chart 2)**: add an `.annual-bar-row` with the year label, single `.liquid-bar-fill` (width proportional to chart max, e.g. 15,000 L), and total litres.
 
 4. **Check all figures**: Always use the printed figures from the hospital's annual statement; mark calculated totals or averages with `*` and retain the explanatory note. Use neutral language without comparative adjectives (e.g. avoid words like "increase", "decrease", "improved", or "better").
+
+## How to Add a Patient Education Item
+
+1. **Create the guide page**:
+   - Copy `education-adult-vaccination.html` to `education-<slug>.html` in the root folder.
+   - Update the `<title>`, `<meta name="description">`, H1, Hindi subtitle, and content cards with the new guide's information.
+   - Keep `<meta name="robots" content="noindex">` on the page until ready for launch.
+
+2. **Add a card to `patient-education.html`**:
+   - Add a card inside `.card-grid` under the relevant section.
+   - Wrap the card in `.tbc-block` until the content is fully reviewed and confirmed by the hospital.
+
+3. **Optionally add to the home page section**:
+   - If prominent placement is required, add a summary card to the Patient Education section on `index.html`.
+
+4. **Handling video guides**:
+   - For a video, add a plain text link to the video page for now.
+   - Tell the developer to build a lightweight click-to-load video player when the first video is chosen so that no remote YouTube thumbnails, scripts, or iframes load on page load.
 
 ## Licence
 
