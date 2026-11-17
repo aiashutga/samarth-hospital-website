@@ -98,40 +98,101 @@
     <section class="page-content section">
       <div class="container">
 
-        <!-- TBC Block: Doctors List -->
-        <div class="tbc-block">
-          <p><span class="tbc">TBC: This page will list all doctors with their names, qualifications, designations, and departments. Doctor details are needed from the hospital.</span></p>
+        <!-- Resident doctors -->
+        <section aria-labelledby="resident-doctors-heading">
+          <h2 id="resident-doctors-heading">Resident doctors</h2>
+          <div class="doctors-grid-2" style="max-width:760px;">
+            <!-- Dr. Tanay Surjan -->
+            <div class="card doctor-card">
+              <div class="doctor-photo-frame">
+                <img src="assets/images/doctors/dr-tanay-surjan.jpg"
+                     alt="Portrait of Dr. Tanay Surjan"
+                     width="600" height="750"
+                     loading="lazy"
+                     decoding="async">
+              </div>
+              <h3 class="doctor-name">Dr. Tanay Surjan</h3>
+              <p class="doctor-qualification">MBBS, MD (General Medicine)</p>
+              <p class="doctor-speciality">Speciality: General Medicine</p>
+              <p class="doctor-experience">11 years of experience</p>
+              <p class="doctor-timing-note">For days and timings, please call the hospital.</p>
+              <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
+            </div>
 
-          <div class="card-grid" style="margin-top:2rem;">
-            <div class="card" style="text-align:center;">
-              <div class="photo-placeholder" style="aspect-ratio:1/1; border-radius:50%; max-width:140px; margin:0 auto 1rem;">
-                Photo coming soon
+            <!-- Dr. Suyash Sharma -->
+            <div class="card doctor-card">
+              <div class="doctor-photo-frame">
+                <img src="assets/images/doctors/dr-suyash-sharma.jpg"
+                     alt="Portrait of Dr. Suyash Sharma"
+                     width="600" height="750"
+                     loading="lazy"
+                     decoding="async">
               </div>
-              <h3><span class="tbc">TBC: Doctor Name</span></h3>
-              <p><span class="tbc">TBC: Qualification, Department</span></p>
-            </div>
-            <div class="card" style="text-align:center;">
-              <div class="photo-placeholder" style="aspect-ratio:1/1; border-radius:50%; max-width:140px; margin:0 auto 1rem;">
-                Photo coming soon
-              </div>
-              <h3><span class="tbc">TBC: Doctor Name</span></h3>
-              <p><span class="tbc">TBC: Qualification, Department</span></p>
-            </div>
-            <div class="card" style="text-align:center;">
-              <div class="photo-placeholder" style="aspect-ratio:1/1; border-radius:50%; max-width:140px; margin:0 auto 1rem;">
-                Photo coming soon
-              </div>
-              <h3><span class="tbc">TBC: Doctor Name</span></h3>
-              <p><span class="tbc">TBC: Qualification, Department</span></p>
+              <h3 class="doctor-name">Dr. Suyash Sharma</h3>
+              <p class="doctor-qualification">MBBS, DNB (Ortho)</p>
+              <p class="doctor-speciality">Speciality: Orthopaedics</p>
+              <p class="doctor-experience">10 years of experience</p>
+              <p class="doctor-timing-note">For days and timings, please call the hospital.</p>
+              <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="card" style="margin-top:2.5rem; text-align:center; background-color:var(--tint);">
-          <h2 style="font-size:1.2rem; color:var(--navy-deep); margin-top:0;">Consultant Details</h2>
-          <p style="margin:0.5rem auto 1.25rem; max-width:600px;">Consultant details: please call the hospital.</p>
-          <a href="tel:+918602565053" class="btn btn-call">📞 Call +91 86025 65053</a>
-        </div>
+        <!-- Visiting consultants -->
+        <section style="margin-top:3rem;" aria-labelledby="visiting-consultants-heading">
+          <h2 id="visiting-consultants-heading">Visiting consultants</h2>
+          <p>Visiting consultants and their visiting schedule.</p>
+          <div class="doctors-grid-3">
+            <!-- Dr. Sumit Bhatnagar -->
+            <div class="card doctor-card" style="text-align:center;">
+              <div class="doctor-avatar-wrap">
+                <img src="assets/icons/doctor-avatar.svg" width="96" height="96" alt="" class="doctor-avatar">
+              </div>
+              <h3 class="doctor-name">Dr. Sumit Bhatnagar</h3>
+              <p class="doctor-speciality">Cardiologist</p>
+              <p class="doctor-schedule">Every 2nd Thursday</p>
+            </div>
+
+            <!-- Dr. Pranay Choubey -->
+            <div class="card doctor-card" style="text-align:center;">
+              <div class="doctor-avatar-wrap">
+                <img src="assets/icons/doctor-avatar.svg" width="96" height="96" alt="" class="doctor-avatar">
+              </div>
+              <h3 class="doctor-name">Dr. Pranay Choubey</h3>
+              <p class="doctor-speciality">General Surgeon</p>
+              <p class="doctor-schedule">Every 2nd and 4th Saturday</p>
+            </div>
+
+            <!-- Dr. Vinay Gangwani -->
+            <div class="card doctor-card" style="text-align:center;">
+              <div class="doctor-avatar-wrap">
+                <img src="assets/icons/doctor-avatar.svg" width="96" height="96" alt="" class="doctor-avatar">
+              </div>
+              <h3 class="doctor-name">Dr. Vinay Gangwani</h3>
+              <p class="doctor-speciality">ENT Specialist</p>
+              <p class="doctor-schedule">Every 2nd and 4th Saturday</p>
+            </div>
+          </div>
+
+          <div style="margin-top:1.5rem; text-align:center;">
+            <p style="margin-bottom:1rem;">Please call to confirm the date before you visit.</p>
+            <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
+          </div>
+        </section>
+
+        <!-- Dental department -->
+        <section style="margin-top:3rem;" aria-labelledby="dental-heading">
+          <h2 id="dental-heading">Dental department</h2>
+          <div class="card dept-card" style="max-width:400px; margin-top:1.5rem;">
+            <div class="dept-badge-wrap">
+              <img src="assets/icons/dept-dental.svg" width="96" height="96" alt="" class="dept-badge">
+            </div>
+            <h3>Dental</h3>
+            <p>Care for the teeth, gums and mouth, including check-ups and treatment of common problems such as tooth pain, cavities and gum disease.</p>
+            <p class="dept-consultant-note">Consultant details: please call the hospital.</p>
+            <a href="tel:+918602565053" class="btn btn-outline dept-call-btn">📞 Call to enquire</a>
+          </div>
+        </section>
 
       </div>
     </section>

@@ -17,8 +17,10 @@
   - Confirm active operating days for other departments (e.g. Monday to Saturday or 7 days).
   - Confirm Sunday and public holiday opening hours.
 - [ ] **Emergency / ambulance phone number** — Confirm if there is a separate dedicated emergency or ambulance contact number.
-- [ ] **Doctor details** — Get each doctor's name, qualification, designation, and department to build out `doctors.html` and the home preview cards.
-- [ ] **Doctors link hidden in launch mode** — Doctors link hidden in launch mode: when doctor details arrive, fill doctors.html and remove the tbc-block class from the nav and footer items.
+- [ ] **Dentist details** — Obtain dentist's name, qualification and photo for the Dental department.
+- [ ] **Visiting consultants details** — Obtain visiting consultants' qualifications and photos.
+- [ ] **Doctor timings** — Confirm exact days and timings per doctor.
+- [ ] **Doctors link hidden in launch mode** — Doctors link hidden in launch mode: when remaining doctor details arrive, remove the tbc-block class from the nav and footer items.
 - [x] **Hospital history & timeline** — Added to `about.html` with responsive CSS timeline.
 - [ ] **Organisation details** — Obtain registration details and management/organisation information from hospital administration.
 - [ ] **NABH certificate wording confirmation** — Confirm the exact wording on the NABH certificate.
@@ -62,4 +64,4 @@
 
 ---
 
-*Last updated: 15 November 2026 (Phase 4b)*
+*Last updated: 17 November 2026 (Phase 2)*
