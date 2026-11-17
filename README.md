@@ -17,15 +17,15 @@ samarth-hospital-website/
 ├── about.html              About the hospital
 ├── services.html           Departments (nav label: "Departments")
 ├── doctors.html            Our doctors
-├── environment.html        Bio-medical waste management & environment report
+├── bmw-management.html     Bio-medical waste management report
 ├── gallery.html            Photo gallery
-├── contact.html            Contact, OPD timings, map & enquiry form
+├── contact.html            Contact, OPD timings, directions & call details
 ├── privacy.html            Privacy policy & medical disclaimer
 ├── css/
 │   └── style.css           All styles (theme variables at top, launch mode at bottom)
 ├── js/
-│   ├── main.js             Mobile menu toggle, contact form handler
-│   ├── environment.js      Year tab switching & keyboard navigation for environment report
+│   ├── main.js             Mobile menu toggle
+│   ├── environment.js      Year tab switching & keyboard navigation for BMW management report
 │   └── gallery.js          Photo gallery lightbox with progressive enhancement
 ├── assets/
 │   ├── images/             Hospital logo, emblem, favicons, og-share, photos
@@ -118,13 +118,13 @@ If you need to launch the website before all placeholders (such as doctor photos
 
 See **[TODO-before-launch.md](TODO-before-launch.md)** for the full checklist of items that need to be completed, confirmed, or replaced before the site goes public.
 
-## How to Add a New Year to the Environment Report
+## How to Add a New Year to the BMW Management Report
 
 The hospital records its bio-medical waste quantities monthly under four colour categories (Yellow, Red, White, Blue) in an annual statement for 1 January to 31 December. Liquid waste treated in the in-house Effluent Treatment Plant (ETP) is recorded annually in litres.
 
 When a new annual statement is prepared (e.g. for 2026):
 
-1. **Add a new tab panel in `environment.html`**:
+1. **Add a new tab panel in `bmw-management.html`**:
    - Duplicate an existing `<div class="year-tabpanel" role="tabpanel" id="panel-YYYY" aria-labelledby="tab-YYYY">` block.
    - Update the year in headings, summary cards, report details box, and liquid waste box.
    - Update the 12 monthly table rows with the new data from the hospital statement.
@@ -133,12 +133,12 @@ When a new annual statement is prepared (e.g. for 2026):
    - Update the monthly bar chart widths (`width: X%`) based on the highest month of that year.
    - Set `hidden` attribute on older panels if the new year is the default active tab.
 
-2. **Add a new tab button in `environment.html`**:
+2. **Add a new tab button in `bmw-management.html`**:
    - In `<div class="year-tabs-nav" role="tablist">`, add a new `<button role="tab" id="tab-YYYY" aria-controls="panel-YYYY" aria-selected="true" tabindex="0">YYYY</button>`.
    - Update the previous active tab button to `aria-selected="false"` and `tabindex="-1"`.
 
 3. **Add the new year's row to the overview charts**:
-   - In **`environment.html`** ("Three Years at a Glance") and **`index.html`** ("Environment Protection & Bio-Medical Waste Management"):
+   - In **`bmw-management.html`** ("Three Years at a Glance") and **`index.html`** ("BMW Management"):
      - In **Solid Waste (Chart 1)**: add an `.annual-bar-row` with the year label, stacked segments (`.bar-yellow`, `.bar-red`, `.bar-white`, `.bar-blue` with widths proportional to the chart max), and total kg.
      - In **Liquid Waste (Chart 2)**: add an `.annual-bar-row` with the year label, single `.liquid-bar-fill` (width proportional to chart max, e.g. 15,000 L), and total litres.
 

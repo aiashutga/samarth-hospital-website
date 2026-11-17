@@ -938,77 +938,72 @@ a:focus {
   font-weight: 600;
 }
 
-/* ---------- 14. Contact Form & Map ---------- */
-.contact-form {
-  max-width: 580px;
-  margin: 0 auto;
-}
-.form-group {
-  margin-bottom: 1.25rem;
-}
-.form-group label {
-  display: block;
-  font-weight: 600;
-  color: var(--navy-deep);
-  margin-bottom: 0.35rem;
-  font-size: 0.95rem;
-}
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem 0.95rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-btn);
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--ink);
-  background-color: var(--white);
-  min-height: 44px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--navy);
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(7, 142, 190, 0.25);
-}
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-.form-note {
-  font-size: 0.88rem;
-  color: var(--grey);
-  margin-top: 0.85rem;
-  line-height: 1.5;
-}
-.form-status {
-  margin-top: 1rem;
-  padding: 0.85rem 1rem;
-  border-radius: var(--radius-btn);
-  font-weight: 600;
-  display: none;
-}
-.form-status.success {
-  display: block;
-  background-color: #E8F5E9;
-  color: #1B5E20;
-  border: 1px solid #A5D6A7;
-}
-.form-status.error {
-  display: block;
-  background-color: #FBE9E7;
-  color: #B71C1C;
-  border: 1px solid #FFAB91;
+/* ---------- 14. Hindi Support, Appointment Booking & Map ---------- */
+/* Hindi text support */
+.hindi-text,
+[lang="hi"] {
+  font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", "Kohinoor Devanagari", system-ui, sans-serif;
+  line-height: 1.75;
 }
 
-.hp-field {
-  position: absolute;
-  left: -9999px;
-  opacity: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
+/* Appointment Booking Card */
+.appointment-card {
+  margin-top: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+.appointment-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy-deep);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.appointment-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .appointment-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.appointment-col {
+  display: flex;
+  flex-direction: column;
+}
+.appointment-col-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy-deep);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--line);
+}
+.appointment-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--ink);
+}
+.appointment-list li {
+  margin-bottom: 0.65rem;
+  line-height: 1.6;
+}
+.appointment-list li:last-child {
+  margin-bottom: 0;
+}
+.appointment-list strong {
+  color: var(--navy-deep);
+}
+.appointment-emergency {
+  font-weight: 700;
+  color: var(--navy-deep);
 }
 
 .map-wrap {
