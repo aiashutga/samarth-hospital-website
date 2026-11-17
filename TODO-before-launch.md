@@ -26,7 +26,7 @@
 - [ ] **Liquid waste measurement clarification** — Clarify with hospital administration what exactly the liquid waste figure counts (e.g. liquid waste from OT, lab, laundry, floor washing) and how it is measured (flow meter readings, batch tank logs, or estimates).
 - [ ] **ETP technical details & water testing** — Obtain technical specifications for the in-house Effluent Treatment Plant (ETP), including daily treatment capacity, disinfection method (e.g., sodium hypochlorite dosing), and periodic laboratory test reports for garden use.
 - [ ] **State Pollution Control Board authorisation number** — Confirm State Pollution Control Board authorisation number and validity period from the hospital for the BMW management report.
-- [x] **Hospital photos** — Processed photos placed in `assets/images/photos/` and displayed across home, gallery, and BMW management pages.
+- [x] **Hospital photos** — 18 processed photos placed in `assets/images/photos/` and displayed across home, gallery, and BMW management pages.
 - [ ] **Photo room-name corrections** — Client to send remaining room-name corrections.
 - [ ] **Blurred reception & waiting hall photos confirmation** — Client to confirm he is okay with the blurred reception and waiting hall photos.
 - [ ] **Original-quality photos request** — Ask the client for original-quality photos (sent as "Document" on WhatsApp). Keep the same file names, and blur faces and number plates again before use.

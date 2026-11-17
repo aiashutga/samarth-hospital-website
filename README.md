@@ -35,7 +35,7 @@ samarth-hospital-website/
 │   │   ├── favicon-32.png       Favicon 32x32 PNG
 │   │   ├── apple-touch-icon.png Touch icon (180x180)
 │   │   ├── og-share.png         Open Graph preview image (1200x630)
-│   │   └── photos/              Hospital photos (13 JPGs) & PHOTOS.md
+│   │   └── photos/              Hospital photos (18 JPGs) & PHOTOS.md
 │   └── icons/              Department badges (96x96 SVG)
 │       ├── dept-general-medicine.svg
 │       ├── dept-orthopaedic.svg
