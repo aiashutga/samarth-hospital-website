@@ -97,6 +97,21 @@ If you need to launch the website before all placeholders (such as doctor photos
    ```
 4. Save the file. Every element marked with `tbc-block` will immediately be hidden from display without breaking the layout.
 
+## How to Add a Certificate
+
+When a new certificate scan (such as the NABH Entry Level certificate) is ready to be published:
+
+1. **Place the certificate files**:
+   - Save the scan in `assets/certificates/` as a JPG image (e.g. `nabh-entry-level.jpg`).
+   - Save the PDF beside it with the same base name (e.g. `nabh-entry-level.pdf`).
+   - Compress the JPG image under 400 KB.
+
+2. **Add or update the card in `about.html`**:
+   - In the `#accreditations` section, locate the `.certificate-card` block (or copy an existing one for a new certificate).
+   - Fill in the certificate number, valid from date, and valid until date.
+   - Uncomment the thumbnail image and "View certificate" link.
+   - Remove the `.tbc` and `.tbc-block` wrappers only after the client confirms the wording on the certificate.
+
 ## How to Preview Locally
 
 1. Open the folder in your file manager.

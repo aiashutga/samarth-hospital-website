@@ -19,7 +19,11 @@
 - [ ] **Emergency / ambulance phone number** — Confirm if there is a separate dedicated emergency or ambulance contact number.
 - [ ] **Doctor details** — Get each doctor's name, qualification, designation, and department to build out `doctors.html` and the home preview cards.
 - [ ] **Doctors link hidden in launch mode** — Doctors link hidden in launch mode: when doctor details arrive, fill doctors.html and remove the tbc-block class from the nav and footer items.
-- [ ] **About page content** — Obtain hospital history, mission, and registration details from hospital administration.
+- [x] **Hospital history & timeline** — Added to `about.html` with responsive CSS timeline.
+- [ ] **Organisation details** — Obtain registration details and management/organisation information from hospital administration.
+- [ ] **NABH certificate wording confirmation** — Confirm the exact wording on the NABH certificate.
+- [ ] **NABH logo usage** — Ask whether the NABH logo may be used.
+- [ ] **NABH certificate details** — Obtain certificate number, valid from, and valid until dates.
 - [x] **Google Maps embed code** — Google Maps embed URL integrated on `contact.html`.
 - [ ] **Privacy & disclaimer page** — Have the hospital review the text in `privacy.html`.
 - [ ] **3-Year BMW Management & Liquid Waste disclosure** — Client / Dr. Tanay Surjan to review the 3-year bio-medical waste figures (2023, 2024, 2025) and liquid waste reporting wording on `bmw-management.html` and `index.html`, including publishing the CBWTF membership number (1730 B).
