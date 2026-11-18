@@ -20,7 +20,6 @@
   - Confirm active operating days for other departments (e.g. Monday to Saturday or 7 days).
   - Confirm Sunday and public holiday opening hours.
 - [ ] **Emergency / ambulance phone number** — Confirm if there is a separate dedicated emergency or ambulance contact number.
-- [ ] **Photo of Dr. Nidhi Surjan** — Photo of Dr. Nidhi Surjan (save as assets/images/doctors/dr-nidhi-surjan.jpg and replace the placeholder; see the comment in doctors.html and index.html).
 - [ ] **Visiting consultants details** — Obtain visiting consultants' qualifications and photos.
 - [ ] **Doctor timings** — Confirm exact days and timings per doctor.
 - [ ] **Doctors link hidden in launch mode** — Doctors link hidden in launch mode: when remaining doctor details arrive, remove the tbc-block class from the nav and footer items.

@@ -2130,33 +2130,6 @@ a:focus {
 .doctor-photo-frame-sm {
   max-width: 200px;
 }
-.doctor-photo-placeholder {
-  background-color: var(--tint);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.doctor-placeholder-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-}
-.doctor-placeholder-inner .doctor-avatar {
-  width: 80px;
-  height: 80px;
-  display: block;
-}
-.doctor-placeholder-text {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  text-align: center;
-}
 .doctor-name {
   font-size: 1.25rem;
   color: var(--navy-deep);

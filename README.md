@@ -62,7 +62,10 @@ Hospital photographs are stored in `assets/images/photos/`. See `assets/images/p
 
 ### Doctor Portraits
 
-Resident doctor portraits are stored in `assets/images/doctors/`.
+Resident doctor portraits are stored in `assets/images/doctors/`:
+- `dr-tanay-surjan.jpg` (600×750) — Dr. Tanay Surjan
+- `dr-nidhi-surjan.jpg` (600×750) — Dr. Nidhi Surjan
+- `dr-suyash-sharma.jpg` (600×750) — Dr. Suyash Sharma
 
 **Portrait specification:**
 - Dimensions: 600×750 pixels (4:5 aspect ratio).
@@ -70,18 +73,6 @@ Resident doctor portraits are stored in `assets/images/doctors/`.
 - Eye line: eyes positioned at approximately 28% from the top of the frame.
 - Face width: face width approximately 35% of the frame.
 - Framing: all portraits must share the same eye line, chin position, and face size so they render consistently without CSS overrides.
-
-**Three steps to replace Dr. Nidhi Surjan's placeholder:**
-1. Save the new portrait as `assets/images/doctors/dr-nidhi-surjan.jpg` (600×750, 4:5, head-and-shoulders, matching the portrait specification above).
-2. In `doctors.html`, locate the `PHOTO PENDING` comment in Dr. Nidhi Surjan's card and replace the `.doctor-photo-placeholder` block with:
-   ```html
-   <img src="assets/images/doctors/dr-nidhi-surjan.jpg"
-        alt="Portrait of Dr. Nidhi Surjan"
-        width="600" height="750"
-        loading="lazy"
-        decoding="async">
-   ```
-3. In `index.html`, locate the `PHOTO PENDING` comment in the doctors preview and replace the `.doctor-photo-placeholder` block with the same `<img>` tag inside `<div class="doctor-photo-frame doctor-photo-frame-sm">`.
 
 ## How to Change Colours (Design System)
 
