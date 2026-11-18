@@ -22,7 +22,7 @@
 - [ ] **Emergency / ambulance phone number** — Confirm if there is a separate dedicated emergency or ambulance contact number.
 - [ ] **Visiting consultants details** — Obtain visiting consultants' qualifications and photos.
 - [ ] **Doctor timings** — Confirm exact days and timings per doctor.
-- [ ] **Doctors link hidden in launch mode** — Doctors link hidden in launch mode: when remaining doctor details arrive, remove the tbc-block class from the nav and footer items.
+- [x] **Doctors link hidden in launch mode** — Doctors link hidden in launch mode: when remaining doctor details arrive, remove the tbc-block class from the nav and footer items.
 - [x] **Hospital history & timeline** — Added to `about.html` with responsive CSS timeline.
 - [ ] **Organisation details** — Obtain registration details and management/organisation information from hospital administration.
 - [ ] **NABH certificate wording confirmation** — Confirm the exact wording on the NABH certificate.
