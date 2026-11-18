@@ -94,10 +94,36 @@ a:focus {
   text-decoration: underline;
 }
 
-/* Visible focus ring (accessibility) */
+/* Links in text blocks: distinguished by underline to not rely on color alone */
+p a:not(.btn),
+li a:not(.btn):not(.footer-nav a):not(.main-nav a):not(.mobile-nav a) {
+  text-decoration: underline;
+}
+
+/* Visible focus ring (accessibility: >= 3:1 contrast against surroundings) */
 :focus-visible {
-  outline: 3px solid var(--cyan);
+  outline: 3px solid var(--navy-deep);
   outline-offset: 2px;
+}
+.site-header :focus-visible,
+.site-footer :focus-visible,
+.call-bar :focus-visible,
+.hero :focus-visible,
+.gallery-dialog :focus-visible {
+  outline: 3px solid #FFE082;
+  outline-offset: 2px;
+}
+
+/* Global reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ---------- 3. Accessibility & Utility ---------- */
@@ -113,9 +139,11 @@ a:focus {
   font-weight: 600;
   text-decoration: none;
 }
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
   top: 0.5rem;
-  outline: 3px solid var(--yellow);
+  outline: 3px solid #FFE082;
+  outline-offset: 2px;
 }
 
 .container {
@@ -450,7 +478,7 @@ a:focus {
 .btn-call-sm {
   padding: 0.5rem 1.15rem;
   font-size: 0.92rem;
-  min-height: 42px;
+  min-height: 44px;
 }
 
 @media (min-width: 769px) {
@@ -720,6 +748,7 @@ a:focus {
     transform: none;
   }
 }
+.card h2,
 .card h3 {
   font-size: 1.2rem;
   font-weight: 700;
@@ -1111,6 +1140,7 @@ a:focus {
   color: var(--white);
 }
 
+.site-footer h2,
 .site-footer h4 {
   color: var(--white);
   margin-bottom: 0.85rem;
@@ -1124,12 +1154,13 @@ a:focus {
 }
 .site-footer a {
   color: #C9D6EE;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: rgba(201, 214, 238, 0.4);
 }
 .site-footer a:hover,
 .site-footer a:focus {
   color: var(--white);
-  text-decoration: underline;
+  text-decoration-color: var(--white);
 }
 .footer-nav {
   list-style: none;
@@ -1139,6 +1170,7 @@ a:focus {
 }
 .footer-nav a {
   min-height: 44px;
+  min-width: 44px;
   display: inline-flex;
   align-items: center;
 }
@@ -1396,7 +1428,7 @@ a:focus {
   color: #332a00;
 }
 .bar-red {
-  background-color: #e53935;
+  background-color: #d32f2f;
   color: #ffffff;
 }
 .bar-white {
@@ -1406,7 +1438,7 @@ a:focus {
   border-right: 2px solid #555555;
 }
 .bar-blue {
-  background-color: #1e88e5;
+  background-color: #1565c0;
   color: #ffffff;
 }
 
@@ -1498,7 +1530,7 @@ a:focus {
   background-color: var(--navy-deep);
 }
 .chart-bar-fill.highlight-low {
-  background-color: var(--cyan);
+  background-color: #026384;
 }
 
 /* Category Definition Cards */

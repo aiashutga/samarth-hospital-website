@@ -23,6 +23,9 @@ samarth-hospital-website/
 ├── gallery.html            Photo gallery
 ├── contact.html            Contact, OPD timings, directions & call details
 ├── privacy.html            Privacy policy & medical disclaimer
+├── 404.html                Page not found (root-absolute paths)
+├── sitemap.xml             XML sitemap for search engines
+├── MAINTENANCE.md          Maintenance guide for non-technical maintainers
 ├── css/
 │   └── style.css           All styles (theme variables at top, launch mode at bottom)
 ├── js/
@@ -192,6 +195,10 @@ When a new annual statement is prepared (e.g. for 2026):
 4. **Handling video guides**:
    - For a video, add a plain text link to the video page for now.
    - Tell the developer to build a lightweight click-to-load video player when the first video is chosen so that no remote YouTube thumbnails, scripts, or iframes load on page load.
+
+## Maintenance Guide
+
+For website maintenance instructions written for non-technical maintainers, see **[MAINTENANCE.md](MAINTENANCE.md)**.
 
 ## Licence
 
